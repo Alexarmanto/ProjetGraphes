@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <limits.h>
+// #include <limits.h>   Vérifier si ça fonctionne sans mais noramelement oui
 
 // --- CONSTANTES ---
 #define INF 1000000000  // Valeur "Infinie"
@@ -13,7 +13,7 @@
 // --- STRUCTURES DE DONNEES ---
 typedef struct {
     int n_sommets;      // Nombre de sommets
-    int** L;            // Matrice des Longueurs (Poids)
+    int** L;            // Matrice des Poids
     int** P;            // Matrice des Prédécesseurs
     int est_charge;     // Indicateur d'état (1 si chargé, 0 sinon)
 } Graphe;
