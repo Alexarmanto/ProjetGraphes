@@ -23,14 +23,14 @@ int** allouer_matrice(int n) {
 
     int** mat = (int**)malloc(n * sizeof(int*));
     if (mat == NULL) {
-        fprintf(stderr, "Erreur fatale : Echec d'allocation memoire (lignes).\n");
+        fprintf(stderr, "Erreur : Echec d'allocation memoire (lignes).\n");
         exit(EXIT_FAILURE);
     }
 
     for (int i = 0; i < n; i++) {
         mat[i] = (int*)malloc(n * sizeof(int));
         if (mat[i] == NULL) {
-            fprintf(stderr, "Erreur fatale : Echec d'allocation memoire (colonnes).\n");
+            fprintf(stderr, "Erreur : Echec d'allocation memoire (colonnes).\n");
             for (int j = 0; j < i; j++) free(mat[j]);
             free(mat);
             exit(EXIT_FAILURE);
