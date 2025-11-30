@@ -1,0 +1,1484 @@
+--- PROJET GRAPHES : FLOYD-WARSHALL ---
+
+Entrez le nom du fichier (ex: graphe.txt) :1.txt
+
+Graphe charge avec succes (4 sommets, 5 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1     5   INF
+  INF     0     3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1     5   INF
+  INF     0     3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1     4     6
+  INF     0     3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0     1     4     6
+  INF     0     3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0     1     4     6
+  INF     0     3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :0
+
+Sommet d'arrivee (0 a 3) :3
+
+Chemin minimal (Cout = 6) : 0 -> 1 -> 3
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :2.txt
+
+Graphe charge avec succes (4 sommets, 5 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1     5   INF
+  INF     0    -3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1     5   INF
+  INF     0    -3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1    -2     6
+  INF     0    -3     5
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     1
+   -1    -1     1     1
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0     1    -2     0
+  INF     0    -3    -1
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     2
+   -1    -1     1     2
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0     1    -2     0
+  INF     0    -3    -1
+  INF   INF     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     1     2
+   -1    -1     1     2
+   -1    -1    -1     2
+   -1    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :0
+
+Sommet d'arrivee (0 a 3) :2
+
+Chemin minimal (Cout = -2) : 0 -> 1 -> 2
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :3.txt
+
+Graphe charge avec succes (4 sommets, 6 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+  INF     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+  INF     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1    -5     3
+  INF     0    -3     2
+  INF     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     1
+   -1    -1     1     1
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0    -1    -5    -3
+  INF     0    -3    -1
+  INF     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2
+   -1    -1     1     2
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0    -1    -5    -3
+  INF     0    -3    -1
+  INF     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2
+   -1    -1     1     2
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :0
+
+Sommet d'arrivee (0 a 3) :1
+
+Chemin minimal (Cout = -1) : 0 -> 2 -> 1
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :4.txt
+
+Graphe charge avec succes (4 sommets, 6 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+  INF    -1     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+  INF    -1     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+   -1     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1    -5     3
+  INF     0    -3     2
+  INF    -1    -4     1
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     1
+   -1    -1     1     1
+   -1     2     1     1
+   -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0    -6    -9    -8
+  INF    -4    -7    -6
+  INF    -5    -8    -7
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     1     1
+   -1     2     1     1
+   -1     2     1     1
+   -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0    -6    -9    -8
+  INF    -4    -7    -6
+  INF    -5    -8    -7
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     1     1
+   -1     2     1     1
+   -1     2     1     1
+   -1    -1    -1    -1
+
+/!\ ALERTE : Circuit absorbant detecte.
+Les resultats ne sont pas garantis.
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :1
+
+Sommet d'arrivee (0 a 3) :0
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :1
+
+Sommet d'arrivee (0 a 3) :2
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :5.txt
+
+Graphe charge avec succes (4 sommets, 8 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+    6     4     0     2
+  INF   INF     2     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+    2     2    -1     2
+   -1    -1     3    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF     0    -3     2
+    6     4     0     2
+  INF   INF     2     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1    -1     1     1
+    2     2    -1     2
+   -1    -1     3    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1    -5     3
+  INF     0    -3     2
+    6     4     0     2
+  INF   INF     2     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     1
+   -1    -1     1     1
+    2     2    -1     2
+   -1    -1     3    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0    -1    -5    -3
+    3     0    -3    -1
+    6     4     0     2
+    8     6     2     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2
+    2    -1     1     2
+    2     2    -1     2
+    2     2     3    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0    -1    -5    -3
+    3     0    -3    -1
+    6     4     0     2
+    8     6     2     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2
+    2    -1     1     2
+    2     2    -1     2
+    2     2     3    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :1
+
+Sommet d'arrivee (0 a 3) :3
+
+Chemin minimal (Cout = -1) : 1 -> 2 -> 3
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :6.txt
+
+Erreur de lecture de l'arc n 9.
+Graphe charge avec succes (4 sommets, 9 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF    -1    -3     2
+    6     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1     1     1     1
+    2     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1    -5   INF
+  INF    -1    -3     2
+    6     4     0     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1
+   -1     1     1     1
+    2     2    -1     2
+   -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     0    -5     2
+  INF    -2    -5     0
+    6     2    -3     2
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     1     0     1
+   -1     1     1     1
+    2     1     1     2
+   -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0    -3    -8    -6
+    1    -3    -8    -6
+    3    -1    -6    -4
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     1     1     2
+    2     1     1     2
+    2     1     1     2
+   -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0    -3    -8    -6
+    1    -3    -8    -6
+    3    -1    -6    -4
+  INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     1     1     2
+    2     1     1     2
+    2     1     1     2
+   -1    -1    -1    -1
+
+/!\ ALERTE : Circuit absorbant detecte.
+Les resultats ne sont pas garantis.
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 3) :3
+
+Sommet d'arrivee (0 a 3) :0
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :7.txt
+
+Graphe charge avec succes (7 sommets, 12 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     2    -5   INF   INF   INF   INF
+  INF     3    -3     3   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+  INF   INF     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1    -1    -1    -1
+   -1     1     1     1    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+   -1    -1     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     2    -5   INF   INF   INF   INF
+  INF     3    -3     3   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+  INF   INF     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0    -1    -1    -1    -1
+   -1     1     1     1    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+   -1    -1     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     2    -5     5   INF   INF   INF
+  INF     3    -3     3   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+  INF   INF     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     1    -1    -1    -1
+   -1     1     1     1    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+   -1    -1     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0    -1    -5    -2   INF   INF   INF
+    4     1    -3     0   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+    9     6     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2    -1    -1    -1
+    2     2     1     2    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+    2     2     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0    -1    -5    -2   INF   INF   INF
+    4     1    -3     0   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+    9     6     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2    -1    -1    -1
+    2     2     1     2    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+    2     2     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0    -1    -5    -2   INF   INF   INF
+    4     1    -3     0   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+    9     6     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5   INF
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2    -1    -1    -1
+    2     2     1     2    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+    2     2     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4    -1
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 5 ===
+MATRICE L (Poids) :
+    0    -1    -5    -2   INF   INF   INF
+    4     1    -3     0   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+    9     6     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5     3
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2    -1    -1    -1
+    2     2     1     2    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+    2     2     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4     5
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 6 ===
+MATRICE L (Poids) :
+    0    -1    -5    -2   INF   INF   INF
+    4     1    -3     0   INF   INF   INF
+    7     4     0     3   INF   INF   INF
+    9     6     2     0   INF   INF   INF
+  INF   INF   INF   INF     0     5     3
+  INF   INF   INF   INF     2     0    -2
+  INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     2     0     2    -1    -1    -1
+    2     2     1     2    -1    -1    -1
+    2     2    -1     2    -1    -1    -1
+    2     2     3    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     4     5
+   -1    -1    -1    -1     5    -1     5
+   -1    -1    -1    -1    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 6) :4
+
+Sommet d'arrivee (0 a 6) :1
+
+Resultat : Pas de chemin existant (Infini).
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :8.txt
+
+Graphe charge avec succes (5 sommets, 7 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1     2     1     4
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0     1
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0     1     2     1     3
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0     2
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0     1     2     1     3
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0     2
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     1     2     1     3
+  INF     0   INF   INF     3
+  INF   INF     0     1     1
+  INF   INF   INF     0     4
+  INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0     2
+   -1    -1    -1    -1     1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1    -1    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 4) :2
+
+Sommet d'arrivee (0 a 4) :1
+
+Resultat : Pas de chemin existant (Infini).
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :9.txt
+
+Graphe charge avec succes (5 sommets, 7 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     1
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     1
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     1
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0     1     2     0     3
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     1
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     2     2
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0     1     2     0     3
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     1
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     2     2
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     2
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     1     2     0     3
+  INF     0   INF   INF   INF
+  INF     4     0    -2     1
+  INF     7   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     2     2
+   -1    -1    -1    -1    -1
+   -1     4    -1     2     2
+   -1     4    -1    -1     3
+   -1     4    -1    -1    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 4) :0
+
+Sommet d'arrivee (0 a 4) :4
+
+Chemin minimal (Cout = 3) : 0 -> 2 -> 4
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+Entrez le nom du fichier (ex: graphe.txt) :10.txt
+
+Graphe charge avec succes (5 sommets, 7 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3    -7   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4     4    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3    -7   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4     4    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0     1     2     1   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3    -7   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     0    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4     4    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0     1     2     0   INF
+  INF     0   INF   INF   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3    -7    -9     0
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     2    -1
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4     4     2    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0     1     2     0     4
+  INF     0   INF   INF   INF
+  INF   INF     0    -2     2
+  INF   INF   INF     0     4
+  INF     3    -7    -9    -5
+
+MATRICE P (Predecesseurs) :
+   -1     0     0     2     3
+   -1    -1    -1    -1    -1
+   -1    -1    -1     2     3
+   -1    -1    -1    -1     3
+   -1     4     4     2     3
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     1    -3    -5    -1
+  INF     0   INF   INF   INF
+  INF     5    -5    -7    -3
+  INF     7    -3    -5    -1
+  INF    -2   -12   -14   -10
+
+MATRICE P (Predecesseurs) :
+   -1     0     4     2     3
+   -1    -1    -1    -1    -1
+   -1     4     4     2     3
+   -1     4     4     2     3
+   -1     4     4     2     3
+
+/!\ ALERTE : Circuit absorbant detecte.
+Les resultats ne sont pas garantis.
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 4) :0
+
+Sommet d'arrivee (0 a 4) :1
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :11.txt
+
+Erreur de lecture de l'arc n 8.
+Graphe charge avec succes (5 sommets, 8 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     2   INF   INF   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1     1    -1    -1    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     2     3     2   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+  INF     3   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1     1     0     0    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+   -1     4    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     2     3     2   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+    4     3     6     5     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1     1     0     0    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+    1     4     0     0    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0   INF     2     0   INF
+    1     2     3     1   INF
+  INF   INF     0    -2   INF
+  INF   INF   INF     0     4
+    4     3     6     4     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2    -1
+    1     1     0     2    -1
+   -1    -1    -1     2    -1
+   -1    -1    -1    -1     3
+    1     4     0     2    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0   INF     2     0     4
+    1     2     3     1     5
+  INF   INF     0    -2     2
+  INF   INF   INF     0     4
+    4     3     6     4     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2     3
+    1     1     0     2     3
+   -1    -1    -1     2     3
+   -1    -1    -1    -1     3
+    1     4     0     2    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     7     2     0     4
+    1     2     3     1     5
+    6     5     0    -2     2
+    8     7    10     0     4
+    4     3     6     4     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3
+    1     1     0     2     3
+    1     4    -1     2     3
+    1     4     0    -1     3
+    1     4     0     2    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 4) :1
+
+Sommet d'arrivee (0 a 4) :3
+
+Chemin minimal (Cout = 1) : 1 -> 0 -> 2 -> 3
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :12.txt
+
+Graphe charge avec succes (5 sommets, 9 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     0   INF   INF     1
+  INF   INF     0    -2   INF
+  INF   INF     7     0     4
+  INF     3    -1   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1    -1    -1    -1     1
+   -1    -1    -1     2    -1
+   -1    -1     3    -1     3
+   -1     4     4    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     0     3     2     1
+  INF   INF     0    -2   INF
+  INF   INF     7     0     4
+  INF     3    -1   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1    -1     0     0     1
+   -1    -1    -1     2    -1
+   -1    -1     3    -1     3
+   -1     4     4    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF
+    1     0     3     2     1
+  INF   INF     0    -2   INF
+  INF   INF     7     0     4
+    4     3    -1     5     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1
+    1    -1     0     0     1
+   -1    -1    -1     2    -1
+   -1    -1     3    -1     3
+    1     4     4     0    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0   INF     2     0   INF
+    1     0     3     1     1
+  INF   INF     0    -2   INF
+  INF   INF     7     0     4
+    4     3    -1    -3     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2    -1
+    1    -1     0     2     1
+   -1    -1    -1     2    -1
+   -1    -1     3    -1     3
+    1     4     4     2    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0   INF     2     0     4
+    1     0     3     1     1
+  INF   INF     0    -2     2
+  INF   INF     7     0     4
+    4     3    -1    -3     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2     3
+    1    -1     0     2     1
+   -1    -1    -1     2     3
+   -1    -1     3    -1     3
+    1     4     4     2    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     7     2     0     4
+    1     0     0    -2     1
+    6     5     0    -2     2
+    8     7     3     0     4
+    4     3    -1    -3     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3
+    1    -1     4     2     1
+    1     4    -1     2     3
+    1     4     4    -1     3
+    1     4     4     2    -1
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 4) :2
+
+Sommet d'arrivee (0 a 4) :0
+
+Chemin minimal (Cout = 6) : 2 -> 3 -> 4 -> 1 -> 0
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :1
+
+
+Entrez le nom du fichier (ex: graphe.txt) :13.txt
+
+Graphe charge avec succes (8 sommets, 12 arcs).
+
+=== ETAPE -1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF   INF   INF   INF
+    1     0   INF   INF     1   INF   INF   INF
+  INF   INF     0    -2   INF   INF   INF   INF
+  INF   INF     7     0     4   INF   INF   INF
+  INF     3    -1   INF     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1    -1    -1    -1
+    1    -1    -1    -1     1    -1    -1    -1
+   -1    -1    -1     2    -1    -1    -1    -1
+   -1    -1     3    -1     3    -1    -1    -1
+   -1     4     4    -1    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 0 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF   INF   INF   INF
+    1     0     3     2     1   INF   INF   INF
+  INF   INF     0    -2   INF   INF   INF   INF
+  INF   INF     7     0     4   INF   INF   INF
+  INF     3    -1   INF     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1    -1    -1    -1
+    1    -1     0     0     1    -1    -1    -1
+   -1    -1    -1     2    -1    -1    -1    -1
+   -1    -1     3    -1     3    -1    -1    -1
+   -1     4     4    -1    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 1 ===
+MATRICE L (Poids) :
+    0   INF     2     1   INF   INF   INF   INF
+    1     0     3     2     1   INF   INF   INF
+  INF   INF     0    -2   INF   INF   INF   INF
+  INF   INF     7     0     4   INF   INF   INF
+    4     3    -1     5     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     0    -1    -1    -1    -1
+    1    -1     0     0     1    -1    -1    -1
+   -1    -1    -1     2    -1    -1    -1    -1
+   -1    -1     3    -1     3    -1    -1    -1
+    1     4     4     0    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 2 ===
+MATRICE L (Poids) :
+    0   INF     2     0   INF   INF   INF   INF
+    1     0     3     1     1   INF   INF   INF
+  INF   INF     0    -2   INF   INF   INF   INF
+  INF   INF     7     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2    -1    -1    -1    -1
+    1    -1     0     2     1    -1    -1    -1
+   -1    -1    -1     2    -1    -1    -1    -1
+   -1    -1     3    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 3 ===
+MATRICE L (Poids) :
+    0   INF     2     0     4   INF   INF   INF
+    1     0     3     1     1   INF   INF   INF
+  INF   INF     0    -2     2   INF   INF   INF
+  INF   INF     7     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1    -1     0     2     3    -1    -1    -1
+    1    -1     0     2     1    -1    -1    -1
+   -1    -1    -1     2     3    -1    -1    -1
+   -1    -1     3    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 4 ===
+MATRICE L (Poids) :
+    0     7     2     0     4   INF   INF   INF
+    1     0     0    -2     1   INF   INF   INF
+    6     5     0    -2     2   INF   INF   INF
+    8     7     3     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2     0    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3    -1    -1    -1
+    1    -1     4     2     1    -1    -1    -1
+    1     4    -1     2     3    -1    -1    -1
+    1     4     4    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6    -1     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 5 ===
+MATRICE L (Poids) :
+    0     7     2     0     4   INF   INF   INF
+    1     0     0    -2     1   INF   INF   INF
+    6     5     0    -2     2   INF   INF   INF
+    8     7     3     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF     0     1   INF
+  INF   INF   INF   INF   INF    -2    -1    -2
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3    -1    -1    -1
+    1    -1     4     2     1    -1    -1    -1
+    1     4    -1     2     3    -1    -1    -1
+    1     4     4    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1    -1     5    -1
+   -1    -1    -1    -1    -1     6     5     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 6 ===
+MATRICE L (Poids) :
+    0     7     2     0     4   INF   INF   INF
+    1     0     0    -2     1   INF   INF   INF
+    6     5     0    -2     2   INF   INF   INF
+    8     7     3     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF    -1     0    -2
+  INF   INF   INF   INF   INF    -3    -2    -4
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3    -1    -1    -1
+    1    -1     4     2     1    -1    -1    -1
+    1     4    -1     2     3    -1    -1    -1
+    1     4     4    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     6     5     6
+   -1    -1    -1    -1    -1     6     5     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+=== ETAPE 7 ===
+MATRICE L (Poids) :
+    0     7     2     0     4   INF   INF   INF
+    1     0     0    -2     1   INF   INF   INF
+    6     5     0    -2     2   INF   INF   INF
+    8     7     3     0     4   INF   INF   INF
+    4     3    -1    -3     0   INF   INF   INF
+  INF   INF   INF   INF   INF    -1     0    -2
+  INF   INF   INF   INF   INF    -3    -2    -4
+  INF   INF   INF   INF   INF   INF   INF     0
+
+MATRICE P (Predecesseurs) :
+   -1     4     0     2     3    -1    -1    -1
+    1    -1     4     2     1    -1    -1    -1
+    1     4    -1     2     3    -1    -1    -1
+    1     4     4    -1     3    -1    -1    -1
+    1     4     4     2    -1    -1    -1    -1
+   -1    -1    -1    -1    -1     6     5     6
+   -1    -1    -1    -1    -1     6     5     6
+   -1    -1    -1    -1    -1    -1    -1    -1
+
+/!\ ALERTE : Circuit absorbant detecte.
+Les resultats ne sont pas garantis.
+
+--- RECHERCHE DE CHEMINS ---
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 7) :0
+
+Sommet d'arrivee (0 a 7) :4
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :1
+
+Sommet de depart (0 a 7) :5
+
+Sommet d'arrivee (0 a 7) :1
+
+RESULTAT : Circuit absorbant. Chemin indefini.
+
+Voulez-vous afficher un chemin ? (1: Oui, 0: Non) :0
+
+
+--------------------------------------------
+Traiter un autre fichier ? (1: Oui, 0: Non) :0
+
+
+Fin du programme.
+
+Process finished with exit code 0
