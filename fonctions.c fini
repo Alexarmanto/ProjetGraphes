@@ -1,0 +1,161 @@
+#include "fonctions.h"
+
+int** allouer_matrice(int n) {
+    if (n <= 0) return NULL;
+
+    int** mat = (int**)malloc(n * sizeof(int*));
+    if (mat == NULL) {
+        printf("Erreur allocation.\n");
+        return NULL;
+    }
+
+    for (int i = 0; i < n; i++) {
+        mat[i] = (int*)malloc(n * sizeof(int));
+        if (mat[i] == NULL) {
+            for (int j = 0; j < i; j++) free(mat[j]);
+            free(mat);
+            return NULL;
+        }
+    }
+    return mat;
+}
+
+void liberer_matrice(int** mat, int n) {
+    if (mat == NULL) return;
+    for (int i = 0; i < n; i++) {
+        free(mat[i]);
+    }
+    free(mat);
+}
+
+void initialiser_graphe(Graphe* g) {
+    g->n_sommets = 0;
+    g->L = NULL;
+    g->P = NULL;
+    g->est_charge = 0;
+}
+
+void detruire_graphe(Graphe* g) {
+    if (g->est_charge == 1) {
+        liberer_matrice(g->L, g->n_sommets);
+        liberer_matrice(g->P, g->n_sommets);
+        g->est_charge = 0;
+        g->n_sommets = 0;
+    }
+}
+
+int charger_graphe_fichier(char* nom_fichier, Graphe* g) {
+    detruire_graphe(g);
+
+    FILE* f = fopen(nom_fichier, "r");
+    if (f == NULL) {
+        printf("Erreur : Impossible d'ouvrir le fichier '%s'.\n", nom_fichier);
+        return 0;
+    }
+
+    if (fscanf(f, "%d", &g->n_sommets) != 1) {
+        printf("Erreur de format (nombre de sommets).\n");
+        fclose(f);
+        return 0;
+    }
+
+    int n_arcs;
+    if (fscanf(f, "%d", &n_arcs) != 1) {
+        printf("Erreur de format (nombre d'arcs).\n");
+        fclose(f);
+        return 0;
+    }
+
+    g->L = allouer_matrice(g->n_sommets);
+    g->P = allouer_matrice(g->n_sommets);
+    g->est_charge = 1;
+
+    for (int i = 0; i < g->n_sommets; i++) {
+        for (int j = 0; j < g->n_sommets; j++) {
+            if (i == j) {
+                g->L[i][j] = 0;
+            } else {
+                g->L[i][j] = INF;
+            }
+            g->P[i][j] = -1;
+        }
+    }
+
+    int u, v, w;
+    for (int k = 0; k < n_arcs; k++) {
+        if (fscanf(f, "%d %d %d", &u, &v, &w) != 3) {
+            printf("Erreur de lecture de l'arc n %d.\n", k + 1);
+            break;
+        }
+        if (u >= 0 && u < g->n_sommets && v >= 0 && v < g->n_sommets) {
+            g->L[u][v] = w;
+            g->P[u][v] = u;
+        }
+    }
+
+    fclose(f);
+    printf("Graphe charge avec succes (%d sommets, %d arcs).\n", g->n_sommets, n_arcs);
+    return 1;
+}
+
+void afficher_matrices(Graphe* g, int k) {
+    printf("\n=== ETAPE %d ===\n", k);
+    printf("MATRICE L (Poids) :\n");
+    for (int i = 0; i < g->n_sommets; i++) {
+        for (int j = 0; j < g->n_sommets; j++) {
+            if (g->L[i][j] == INF) printf("  INF ");
+            else printf("%5d ", g->L[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nMATRICE P (Predecesseurs) :\n");
+    for (int i = 0; i < g->n_sommets; i++) {
+        for (int j = 0; j < g->n_sommets; j++) {
+            printf("%5d ", g->P[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void floyd_warshall(Graphe* g) {
+    if (g->est_charge == 0) return;
+
+    afficher_matrices(g, -1);
+
+    for (int k = 0; k < g->n_sommets; k++) {
+        for (int i = 0; i < g->n_sommets; i++) {
+            for (int j = 0; j < g->n_sommets; j++) {
+                if (g->L[i][k] != INF && g->L[k][j] != INF) {
+                    int nouveau_poids = g->L[i][k] + g->L[k][j];
+                    if (nouveau_poids < g->L[i][j]) {
+                        g->L[i][j] = nouveau_poids;
+                        g->P[i][j] = g->P[k][j];
+                    }
+                }
+            }
+        }
+        afficher_matrices(g, k);
+    }
+}
+
+int detecter_circuit_absorbant(Graphe* g) {
+    for (int i = 0; i < g->n_sommets; i++) {
+        if (g->L[i][i] < 0) return 1;
+    }
+    return 0;
+}
+
+void afficher_chemin_recursif(Graphe* g, int depart, int arrivee) {
+    if (depart == arrivee) {
+        printf("%d", depart);
+        return;
+    }
+    int pred = g->P[depart][arrivee];
+    if (pred == -1) {
+        printf("(Pas de chemin)");
+        return;
+    }
+    afficher_chemin_recursif(g, depart, pred);
+    printf(" -> %d", arrivee);
+}
