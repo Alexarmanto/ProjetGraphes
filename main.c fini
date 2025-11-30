@@ -1,0 +1,73 @@
+int main() {
+    Graphe g;
+    initialiser_graphe(&g);
+
+    int continuer_programme = 1;
+    char nom_fichier[MAX_FILENAME];
+
+    printf("--- PROJET GRAPHES : FLOYD-WARSHALL ---\n");
+
+    while (continuer_programme == 1) {
+
+        printf("\nEntrez le nom du fichier (ex: graphe.txt) : ");
+        scanf("%s", nom_fichier);
+
+        if (charger_graphe_fichier(nom_fichier, &g) == 1) {
+
+            floyd_warshall(&g);
+
+            int circuit_detecte = detecter_circuit_absorbant(&g);
+
+            if (circuit_detecte == 1) {
+                printf("\n/!\\ ALERTE : Circuit absorbant detecte.\n");
+                printf("Les resultats ne sont pas garantis.\n");
+            }
+
+            printf("\n--- RECHERCHE DE CHEMINS ---\n");
+
+            int continuer_chemin = 1;
+            int choix = 0;
+
+            while (continuer_chemin == 1) {
+                printf("\nVoulez-vous afficher un chemin ? (1: Oui, 0: Non) : ");
+                scanf("%d", &choix);
+
+                if (choix == 0) {
+                    continuer_chemin = 0;
+                } else {
+                    int depart, arrivee;
+
+                    printf("Sommet de depart (0 a %d) : ", g.n_sommets - 1);
+                    scanf("%d", &depart);
+
+                    printf("Sommet d'arrivee (0 a %d) : ", g.n_sommets - 1);
+                    scanf("%d", &arrivee);
+
+                    if (depart < 0 || depart >= g.n_sommets || arrivee < 0 || arrivee >= g.n_sommets) {
+                        printf("Erreur : Sommets invalides.\n");
+                    }
+                    else if (circuit_detecte == 1) {
+                        printf("RESULTAT : Circuit absorbant. Chemin indefini.\n");
+                    }
+                    else if (g.L[depart][arrivee] == INF) {
+                        printf("Resultat : Pas de chemin existant (Infini).\n");
+                    }
+                    else {
+                        printf("Chemin minimal (Cout = %d) : ", g.L[depart][arrivee]);
+                        afficher_chemin_recursif(&g, depart, arrivee);
+                        printf("\n");
+                    }
+                }
+            }
+        }
+
+        detruire_graphe(&g);
+
+        printf("\n--------------------------------------------\n");
+        printf("Traiter un autre fichier ? (1: Oui, 0: Non) : ");
+        scanf("%d", &continuer_programme);
+    }
+
+    printf("\nFin du programme.\n");
+    return 0;
+}
